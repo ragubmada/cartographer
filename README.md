@@ -53,13 +53,6 @@ Running the game through a local server will resolve any CORS-related issues.
 - Responsive design for various screen sizes
 - Requires a local web server due to CORS policies
 
-## Technical Details
-
--   Implemented using pure JavaScript, HTML, and CSS
--   No external libraries or frameworks used
--   Responsive design for various screen sizes
-- Requires a local web server due to CORS policies
-
 ## Completed Features
 
 -   11x11 grid with set mountain positions
