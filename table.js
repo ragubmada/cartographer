@@ -4,7 +4,6 @@ import {
     rotate,
     getElem,
     getRowCol,
-    setSeasons,
     showPreview,
     getElemsPos,
     countPoints,
@@ -21,7 +20,7 @@ import {
     mountains,
     missionPoints,
     surroundedMountain
-} from "./utilities/helper-consts.js";
+} from "./utilities/helper-vars.js";
 
 
 const table = document.querySelector("#game-container #table");
@@ -64,6 +63,9 @@ setMissionCard("C", selectedMissions[2]);
 setMissionCard("D", selectedMissions[3]);
 setMissionCard("Extra", selectedMissions[4]);
 
+function setSeasons(newSeasons) {
+    seasons = newSeasons;
+}
 
 function saveData() {
     if (!gameOver) {
@@ -102,7 +104,7 @@ function loadData() {
         setMissionCard("D", selectedMissions[3]);
 
         seasonText.innerText = seasons[currentSeason].hun;
-        currentTime.innerText = `${seasonTime}/7`
+        currentTime.innerText = `${seasonTime}/7`;
 
         for (let i = 0; i < currentSeason; i++) {
             const seasonScore = document.querySelector(`div[id='${i}'] span`);
@@ -170,7 +172,7 @@ function saveElems(event) {
             }
 
             seasonTime -= elemToPlace.time;
-            currentTime.innerText = `${seasonTime}/7`
+            currentTime.innerText = `${seasonTime}/7`;
 
             if (seasonTime <= 0 && currentSeason !== 3) {
                 const seasonScore = document.querySelector(`div[id='${currentSeason}'] span`);

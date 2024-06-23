@@ -11,7 +11,7 @@ import {richTown} from "../missions/extra/rich-town.js";
 import {irrigationCanal} from "../missions/extra/irrigation-canal.js";
 import {terracedHouse} from "../missions/extra/terraced-house.js";
 import {richCountryside} from "../missions/extra/rich-countryside.js";
-import {missionPoints, seasons} from "./helper-consts";
+import {missionPoints} from "./helper-vars";
 
 
 export function shuffleArray(array) {
@@ -185,10 +185,6 @@ export function setMissionPoints(cardId, points) {
 
 export function updateMissionPoints(newMissionPoints) {
     missionPoints = newMissionPoints;
-}
-
-export function setSeasons(newSeasons) {
-    seasons = newSeasons;
 }
 
 export function selectRandomMissions(missions, count) {
